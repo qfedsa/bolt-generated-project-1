@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/sf-automation-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinity Automation: Automatisiertes Projektmanagement für die Baubranche</title>
+    <meta name="description" content="Steigere die Effizienz deiner Bauprojekte mit Infinity Automation. Automatisiere deine Projektplanung, -steuerung und -kommunikation. Jetzt kostenlose Demo anfordern!" />
+    <meta name="keywords" content="Projektmanagement Software, Bauprojektmanagement, Automatisierung Bau, digitale Baustelle, Bauplanung Software, Projektmanagement Tool Bau" />
+    <meta property="og:title" content="Infinity Automation: Automatisiertes Projektmanagement für die Baubranche" />
+    <meta property="og:description" content="Steigere die Effizienz deiner Bauprojekte mit Infinity Automation. Automatisiere deine Projektplanung, -steuerung und -kommunikation. Jetzt kostenlose Demo anfordern!" />
+    <meta property="og:image" content="/sf-automation-logo.png" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YGBPDYMZJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2YGBPDYMZJ');
+    </script>
+    
+    <!-- Performance Optimierungen -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    
+    <!-- Web Vitals -->
+    <script type="module">
+      import {onCLS, onFID, onLCP, onFCP, onTTFB} from 'https://unpkg.com/web-vitals@3/dist/web-vitals.attribution.min.js';
+      
+      function sendToAnalytics({name, delta, value, id}) {
+        const body = {
+          name,
+          value: delta,
+          rating: value,
+          id
+        };
+
+        // Senden an Google Analytics
+        gtag('event', name.toLowerCase(), {
+          value: delta,
+          metric_id: id,
+          metric_value: value,
+          metric_delta: delta
+        });
+      }
+
+      // Web Vitals messen
+      onCLS(sendToAnalytics);
+      onFID(sendToAnalytics);
+      onLCP(sendToAnalytics);
+      onFCP(sendToAnalytics);
+      onTTFB(sendToAnalytics);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
